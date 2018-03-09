@@ -7,7 +7,7 @@ RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
 # Update and install latest packages and prerequisites
-RUN yum makecache fast && yum update -y \ 
+RUN yum update -y \ 
     && yum install -y --nogpgcheck \
         git \
         curl \
@@ -45,4 +45,4 @@ COPY config/php.ini /etc/php.ini
 
 # EXPOSE 80
 # ENTRYPOINT ["/usr/sbin/httpd"]
-ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/bin/bash"]
