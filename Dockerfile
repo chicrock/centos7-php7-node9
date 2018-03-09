@@ -1,6 +1,8 @@
 FROM centos/httpd:latest
 MAINTAINER chicrock
 
+# It's for gitlab runner
+
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
